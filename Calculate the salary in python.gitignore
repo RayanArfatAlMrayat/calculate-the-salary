@@ -1,0 +1,17 @@
+def computepay(hours, rate) :
+	if hours<40 : 
+	    pay=hours*rate 
+	else : 
+	    pay=40*rate+((hours-40)*rate*1.5)
+	return pay 
+ 
+salary=(input('How many times do you want to calculate the salary : '))  
+i=0
+try : 
+    while i<int(salary ) : 
+        i+=1 
+        Hours=float(input('enter hours'))
+        Rate=float(input('enter rate')) 
+        print('your pay is : ',computepay(Hours, Rate)) 
+except Exception as ex :  
+    print('you must  be enter a numbers not  letters or a symbol')
